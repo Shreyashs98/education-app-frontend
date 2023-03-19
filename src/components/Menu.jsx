@@ -1,5 +1,8 @@
+import './Menu.css';
+
 const Menu = () => {
     return (
+        
         <nav className="navbar navbar-expand-lg bg-body-secondary">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/"><h3>Education App</h3></a>

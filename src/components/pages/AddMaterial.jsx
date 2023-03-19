@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { postMaterial } from '../../services/materials';
 import './MaterialsList.css';
+import './AddMaterial.css'
 const AddMaterial = () => {
     const nameRef = useRef();
     const linktodownloadRef = useRef();

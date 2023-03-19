@@ -2,7 +2,7 @@ import Menu from './Menu';
 import Home from './pages/Home';
 import MaterialsList from './pages/MaterialsList';
 import AddMaterial from './pages/AddMaterial';
-
+import './App.css'
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {

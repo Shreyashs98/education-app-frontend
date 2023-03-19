@@ -58,8 +58,10 @@ const MaterialsList = () => {
                                         <div className="card-body">
                                             <h5 className="card-title">{w.name}</h5>
                                             <div className="card-text">
-                                                <a a href={w.linktodownload} target="_blank" rel="noopener noreferrer">{w.linktodownload}</a>
+                                                <button className="btn btn-primary" style={{backgroundColor: 'blue', color: 'white', fontWeight: 'bold',position: 'absolute', bottom: '0', right: '0', margin: '10px'}} onClick={() => window.open(w.linktodownload, "_blank")}>Link</button>
                                             </div>
+
+
                                         </div>
                                     </div>
                                 </div>

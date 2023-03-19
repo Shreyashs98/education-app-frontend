@@ -1,0 +1,82 @@
+/* navbar */
+.navbar {
+    background-color: #b0a3a3;
+    color: #fff;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* navbar brand */
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* navbar toggler icon */
+  .navbar-toggler-icon {
+    background-image: url('https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/09_menu_stack-512.png');
+    background-size: cover;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* active nav link */
+  .nav-link.active {
+    font-weight: bold;
+  }
+  
+  /* nav link hover */
+  .nav-link:hover {
+    text-decoration: none;
+  }
+  
+  /* navbar collapse */
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
+  /* navbar ul */
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* navbar li */
+  .nav-item {
+    padding: 0.5rem;
+  }
+  
+  /* navbar link */
+  .nav-link {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* navbar link hover */
+  .nav-link:hover {
+    color: #ccc;
+  }
+  
+  /* navbar active link */
+  .nav-link.active {
+    color: #ccc;
+  }
+  
+  /* navbar button */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  /* navbar button icon */
+  .navbar-toggler-icon {
+    background-color: #deb4b4;
+    border-radius: 4px;
+    padding: 3px;
+  }
+  
+  /* navbar button icon hover */
+  .navbar-toggler-icon:hover {
+    background-color: #ccc;
+  }
+  
