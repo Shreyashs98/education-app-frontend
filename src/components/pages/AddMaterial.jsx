@@ -33,13 +33,13 @@ const AddMaterial = () => {
             <hr />
             <form onSubmit={submitHandler}>
                 <div className="row mb-3">
-                    <label htmlFor="name" className="col-sm-2 col-form-label">Title of Book</label>
+                    <label htmlFor="name" className="col-sm-2 col-form-label">Title</label>
                     <div className="col-sm-10">
                         <input type="text" className="form-control" id="name" ref={nameRef} />
                     </div>
                 </div>
                 <div className="row mb-3">
-                    <label htmlFor="linktodownload" className="col-sm-2 col-form-label">Link to Download</label>
+                    <label htmlFor="linktodownload" className="col-sm-2 col-form-label">Link</label>
                     <div className="col-sm-10">
                         <input type="text" className="form-control" id="linktodownload" ref={linktodownloadRef} />
                     </div>
