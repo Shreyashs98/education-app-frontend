@@ -21,8 +21,9 @@ const postMaterial = async ( material ) => {
     // return response.data;
     return response.data.data;
 };
-const deleteMaterial = async (id) => {
-    const response = await fetch(`http://localhost:3000/materials/${id}`, {
+const deleteMaterial = async (_id) => {
+    console.log(_id)
+    const response = await fetch(`http://localhost:3000/materials/${_id}`, {
         method: "DELETE",
     });
     if (!response.ok) {

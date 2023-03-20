@@ -26,10 +26,10 @@ const MaterialsList = () => {
        []
     );
 
-    const handleDelete = async (id) => {
+    const handleDelete = async (_id) => {
         try {
-            await deleteMaterial(id);
-            setMaterials(materials.filter((w) => w.id !== id));
+            await deleteMaterial(_id);
+            setMaterials(materials.filter((w) => w._id !== _id));
         } catch (error) {
             setError(error);
         }
@@ -96,7 +96,7 @@ const MaterialsList = () => {
                                                     right: "0",
                                                     margin: "0px",
                                                 }}
-                                                onClick={() => handleDelete(w.id)}
+                                                onClick={() => handleDelete(w._id)}
                                             >
                                                 Delete
                                             </button>
