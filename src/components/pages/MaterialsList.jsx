@@ -1,7 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { getMaterials, deleteMaterial, updateMaterial } from '../../services/materials';
-import './MaterialsList.css';
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getMaterials, deleteMaterial } from "../../services/materials";
+//import { updateMaterial} from '../../services/materials';
+import "./MaterialsList.css";
 
 const MaterialsList = () => {
   const [materials, setMaterials] = useState([]);
@@ -36,11 +37,12 @@ const MaterialsList = () => {
   };
 
   const handleUpdate = (_id) => {
-    const materialToUpdate = materials.find((material) => material._id === _id);
-    if (materialToUpdate) {
-      updateMaterial(materialToUpdate);
-      navigate(`/materials/add?_id=${_id}`);
-    }
+    // const materialToUpdate = materials.find((material) => material._id === _id);
+    // if (materialToUpdate) {
+    //updateMaterial(materialToUpdate);
+    handleDelete(_id);
+    navigate(`/materials/add?_id=${_id}`);
+    // }
   };
 
   return (
@@ -62,10 +64,7 @@ const MaterialsList = () => {
       {materials.length !== 0 ? (
         <div className="row">
           {materials.map((material) => (
-            <div
-              className="col-12 col-md-3 col-lg-4 d-flex"
-              key={material._id}
-            >
+            <div className="col-12 col-md-3 col-lg-4 d-flex" key={material._id}>
               <div className="card p-3 w-100 my-3">
                 <img
                   src={material.imageUrl}
@@ -78,17 +77,17 @@ const MaterialsList = () => {
                     <button
                       className="btn btn-primary"
                       style={{
-                        backgroundColor: 'blue',
-                        color: 'white',
-                        fontWeight: 'bold',
-                        position: 'absolute',
-                        bottom: '0',
-                        right: '0',
-                        margin: 'auto',
-                        left: '0',
+                        backgroundColor: "blue",
+                        color: "white",
+                        fontWeight: "bold",
+                        position: "absolute",
+                        bottom: "0",
+                        right: "0",
+                        margin: "auto",
+                        left: "0",
                       }}
                       onClick={() =>
-                        window.open(material.linktodownload, '_blank')
+                        window.open(material.linktodownload, "_blank")
                       }
                     >
                       Link
@@ -97,13 +96,13 @@ const MaterialsList = () => {
                   <button
                     className="btn btn-primary"
                     style={{
-                      backgroundColor: 'red',
-                      color: 'white',
-                      fontWeight: 'bold',
-                      position: 'absolute',
-                      bottom: '0',
-                      right: '0',
-                      margin: '0px',
+                      backgroundColor: "red",
+                      color: "white",
+                      fontWeight: "bold",
+                      position: "absolute",
+                      bottom: "0",
+                      right: "0",
+                      margin: "0px",
                     }}
                     onClick={() => handleDelete(material._id)}
                   >
@@ -113,36 +112,31 @@ const MaterialsList = () => {
                     <button
                       className="btn btn-primary"
                       style={{
-                        backgroundColor: 'green',
-                        color: 'white',
-                        fontWeight: 'bold',
-                        position: 'absolute',
-                        bottom: '0',
-                        left: '0',
-                        margin: '0px',
+                        backgroundColor: "green",
+                        color: "white",
+                        fontWeight: "bold",
+                        position: "absolute",
+                        bottom: "0",
+                        left: "0",
+                        margin: "0px",
                       }}
                       onClick={() => handleUpdate(material._id)}
                     >
                       Update
                     </button>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            ) )
-                        }
-                    </div>
-                )        
-                : (
-                    <div className="alert alert-info" role="alert">
-                        No materials found
-                    </div>
-                )
-            }
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-    )
-}
- 
+      ) : (
+        <div className="alert alert-info" role="alert">
+          No materials found
+        </div>
+      )}
+    </div>
+  );
+};
+
 export default MaterialsList;

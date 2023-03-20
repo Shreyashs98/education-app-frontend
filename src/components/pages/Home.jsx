@@ -7,11 +7,10 @@ const Home = () => {
 
   const handleMaterialsList = () => {
     nav("/materials");
-  }
+  };
 
   const handleAddMaterialsClick = () => {
     nav("/materials/add");
-
   };
 
   return (
@@ -21,12 +20,11 @@ const Home = () => {
         <br />
         <h1>Welcome to My Education App</h1>
         <p>Get access to study materials for free</p>
-        <button className="cta-button" onClick={handleMaterialsList}>Start Learning</button>
+        <button className="cta-button" onClick={handleMaterialsList}>
+          Start Learning
+        </button>
       </div>
-      <div className="featured-section">
-        
-       
-      </div>
+      <div className="featured-section"></div>
       <div className="add-materials-section">
         <h2>Add Your Materials</h2>
         <p>Everyone can contribute to our collection of study materials!</p>

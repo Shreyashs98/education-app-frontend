@@ -1,75 +1,73 @@
 .home-container {
-    background-image: url("https://i.pinimg.com/originals/95/fc/9d/95fc9d6faecd2ecc13b1179ae07b3755.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  .hero-section {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
-  .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .cta-button:hover {
-    background-color: #0059a2;
-  }
-  
-  .featured-section {
-    margin-bottom: 50px;
-  }
-  
-  .featured-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .featured-materials {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .add-materials-section {
-    text-align: center;
-  }
-  
-  .add-materials-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .add-materials-section p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-  }
-  
+  background-image: url("https://i.pinimg.com/originals/95/fc/9d/95fc9d6faecd2ecc13b1179ae07b3755.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  background-color: #0059a2;
+}
+
+.featured-section {
+  margin-bottom: 50px;
+}
+
+.featured-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.featured-materials {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.add-materials-section {
+  text-align: center;
+}
+
+.add-materials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.add-materials-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
