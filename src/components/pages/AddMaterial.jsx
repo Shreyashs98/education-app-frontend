@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { postMaterial } from '../../services/materials';
+import { postMaterial,updateMaterial } from '../../services/materials';
 import './MaterialsList.css';
 import './AddMaterial.css'
 const AddMaterial = () => {
@@ -9,24 +9,41 @@ const AddMaterial = () => {
 
     const submitHandler = ( event ) => {
         event.preventDefault(); 
-
-        alert( 'form is to be submitted' );
-
+    
         const material = {
             name: nameRef.current.value,
             linktodownload: linktodownloadRef.current.value,
             imageUrl: imageUrlRef.current.value,
         };
-
-        if( material.name.trim() === '' || material.linktodownload.trim() === '' || material.imageUrl.trim() === '' ) {
-            alert( 'Fill out all inputs' );
+    
+        if (material.name.trim() === '' || material.linktodownload.trim() === '' || material.imageUrl.trim() === '') {
+            alert('Fill out all inputs');
+            return;
+        }
+    
+        const materialId = updateMaterial;
+    
+        if (materialId) {
+            // this is an update request
+            const updatedMaterial = { ...material, _id: materialId };
+            postMaterial(updatedMaterial)
+                .then(() => {
+                    alert('Material updated successfully');
+                    localStorage.removeItem('materialId');
+                    window.location.reload();
+                })
+                .catch(() => alert('Failed to update material'));
         } else {
-            // all good!
-            console.log( material);
-            postMaterial( material );
+            // this is a new material
+            postMaterial(material)
+                .then(() => {
+                    alert('Material added successfully');
+                    window.location.reload();
+                })
+                .catch(() => alert('Failed to add material'));
         }
     };
-
+    
     return (
         <div className='materials-list'>
             <h1>Add Material</h1>
