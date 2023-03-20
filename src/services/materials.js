@@ -21,8 +21,18 @@ const postMaterial = async ( material ) => {
     // return response.data;
     return response.data.data;
 };
+const deleteMaterial = async (id) => {
+    const response = await fetch(`http://localhost:3000/materials/${id}`, {
+        method: "DELETE",
+    });
+    if (!response.ok) {
+        throw new Error("Failed to delete material");
+    }
+};
+
 
 export {
     getMaterials,
-    postMaterial
+    postMaterial,
+    deleteMaterial
 };

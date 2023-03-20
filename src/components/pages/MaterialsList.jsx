@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getMaterials } from '../../services/materials';
+import { getMaterials, deleteMaterial } from '../../services/materials';
 import './MaterialsList.css';
-
 const MaterialsList = () => {
     const [ materials, setMaterials ] = useState( [] );
     const [ loading, setLoading ] = useState( true );
@@ -26,6 +25,16 @@ const MaterialsList = () => {
         },
        []
     );
+
+    const handleDelete = async (id) => {
+        try {
+            await deleteMaterial(id);
+            setMaterials(materials.filter((w) => w.id !== id));
+        } catch (error) {
+            setError(error);
+        }
+    };
+    
 
     return (
         <div className='materials-list'>
@@ -58,7 +67,42 @@ const MaterialsList = () => {
                                         <div className="card-body">
                                             <h5 className="card-title">{w.name}</h5>
                                             <div className="card-text">
-                                                <button className="btn btn-primary" style={{backgroundColor: 'blue', color: 'white', fontWeight: 'bold',position: 'absolute', bottom: '0', right: '0', margin: '10px'}} onClick={() => window.open(w.linktodownload, "_blank")}>Link</button>
+                                            <button 
+                                                className="btn btn-primary" 
+                                                style={{
+                                                    backgroundColor: 'blue', 
+                                                    color: 'white', 
+                                                    fontWeight: 'bold',
+                                                    position: 'absolute', 
+                                                    bottom: '0', 
+                                                    right: '0', 
+                                                    margin: 'auto',
+                                                    left: '0'
+                                                }} 
+                                                onClick={() => window.open(w.linktodownload, "_blank")}
+                                            >
+                                                Link
+                                            </button>
+
+                                            </div>
+                                            <button
+                                                className="btn btn-primary"
+                                                style={{
+                                                    backgroundColor: "red",
+                                                    color: "white",
+                                                    fontWeight: "bold",
+                                                    position: "absolute",
+                                                    bottom: "0",
+                                                    right: "0",
+                                                    margin: "0px",
+                                                }}
+                                                onClick={() => handleDelete(w.id)}
+                                            >
+                                                Delete
+                                            </button>
+
+                                            <div className="card-text">
+                                                <button className="btn btn-primary" style={{backgroundColor: 'green', color: 'white', fontWeight: 'bold',position: 'absolute', bottom: '0', left: '0', margin: '0px'}} onClick={() => window.open(w.linktodownload, "_blank")}>Update</button>
                                             </div>
 
 
