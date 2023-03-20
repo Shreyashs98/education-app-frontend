@@ -31,9 +31,23 @@ const deleteMaterial = async (_id) => {
     }
 };
 
+// Define the base URL for the API
+const API_BASE_URL = 'http://localhost:3000';
+
+// Define the function for updating a material
+const updateMaterial = async (material) => {
+  try {
+    // Make a PUT request to the API to update the material
+    const response = await axios.put(`${API_BASE_URL}/materials/${material._id}`, material);
+    return response.data;
+  } catch (error) {
+    throw new Error(`Failed to update material: ${error.message}`);
+  }
+};
 
 export {
     getMaterials,
     postMaterial,
-    deleteMaterial
+    deleteMaterial,
+    updateMaterial
 };
