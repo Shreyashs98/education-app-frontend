@@ -58,7 +58,8 @@ const AddMaterial = () => {
 
   return (
     <div className="materials-list">
-      <h1>Add Material</h1>
+      <br />
+      <h1 className="title">Add Material</h1>
       <hr />
       <form onSubmit={submitHandler}>
         <div className="row mb-3">
@@ -67,7 +68,8 @@ const AddMaterial = () => {
           </label>
           <div className="col-sm-10">
             <input
-              type="text"
+              type="description"
+              placeholder="Enter the title"
               className="form-control"
               id="name"
               ref={nameRef}
@@ -80,7 +82,8 @@ const AddMaterial = () => {
           </label>
           <div className="col-sm-10">
             <input
-              type="text"
+              type="description"
+              placeholder="Link to the Material"
               className="form-control"
               id="linktodownload"
               ref={linktodownloadRef}
@@ -89,11 +92,12 @@ const AddMaterial = () => {
         </div>
         <div className="row mb-3">
           <label htmlFor="imageUrl" className="col-sm-2 col-form-label">
-            Image URL
+           Image  
           </label>
           <div className="col-sm-10">
             <input
-              type="text"
+              type="description"
+              placeholder="Enter the Image URL"
               className="form-control"
               id="imageUrl"
               ref={imageUrlRef}
@@ -103,6 +107,7 @@ const AddMaterial = () => {
         <button type="submit" className="btn btn-primary">
           Add Material
         </button>
+        <br/>
       </form>
     </div>
   );

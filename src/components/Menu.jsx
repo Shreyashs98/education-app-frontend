@@ -35,6 +35,11 @@ const Menu = () => {
                 Add Material
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-login" href="/login">
+                Login
+              </a>
+            </li>
           </ul>
         </div>
       </div>

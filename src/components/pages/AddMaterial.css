@@ -17,6 +17,7 @@ input[type="text"] {
   border-radius: 4px;
   padding: 10px;
   font-size: 16px;
+  outline: none; /* add this to remove the default outline when an input is focused */
 }
 
 /* Style the submit button */
@@ -28,6 +29,7 @@ button[type="submit"] {
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* add this to create a smooth transition when the button is hovered over */
 }
 
 /* Style the submit button when it's hovered over */

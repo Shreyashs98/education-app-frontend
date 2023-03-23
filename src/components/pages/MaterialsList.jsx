@@ -47,7 +47,8 @@ const MaterialsList = () => {
 
   return (
     <div className="materials-list">
-      <h1>List of Materials</h1>
+      <br/>
+      <h1 className="title"> List of Materials</h1>
       <hr />
       {loading && (
         <div className="d-flex justify-content-center">
